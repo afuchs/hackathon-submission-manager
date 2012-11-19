@@ -1,0 +1,15 @@
+{
+	name: "Sample App",
+	description: "Just a sample app. It doesn't do anything at all",
+	hackers: [
+		{ 
+			name: "Ari Fuchs",
+			email: "ari@aviary.com",
+			role: "developer"
+		}
+	],
+	platform: "ios",
+	apis: [
+		"aviary", "filepicker.io"
+	]
+}

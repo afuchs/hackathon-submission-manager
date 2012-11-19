@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <% if (submissions.length) { %>
+      <ul>
+        <% submissions.forEach(function(sub) { %>
+          <li>
+            <div>
+              <h3><%= sub.name %></h3>
+              built for <strong><%= sub.platform %></strong> using <% if (!sub.hackers.length) { %>my own shiz<% } else { %>
+                <strong>
+                <% sub.apis.forEach(function(api) { %>
+                  <%= api %>
+                <% }) %>
+                </strong>
+              <% } %>
+              <p><%= sub.description %></p>
+              Hackers: <% if (!sub.hackers.length) { %>none<% } else { %>
+              <ul>
+                <% sub.hackers.forEach(function(hacker) { %>
+                  <li><%= hacker.name %> : <%= hacker.email %> : <%= hacker.role %></li>
+                <% }) %>
+              </ul>
+              <% } %> 
+
+            </div>            
+          </li>
+        <% }) %>
+      </ul>
+    <% } %>
+  </body>
+</html>

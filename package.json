@@ -1,0 +1,15 @@
+{
+  "name": "Hackathon Submission Manager",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "coffee server.coffee"
+  },
+  "dependencies": {
+    "redis": "*",
+    "express": "3.0.3",
+    "ejs": "*",
+    "dust": "*",
+    "consolidate": "*"
+  }
+}
